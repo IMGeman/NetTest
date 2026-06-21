@@ -23,6 +23,16 @@ NetPilot runs a full diagnostic sweep the moment a network ticket comes in and h
 | INC-4819 | VPN degraded — routing via backup WAN path |
 | INC-4815 | False alarm — not a network issue (Salesforce app-layer) |
 
+## Deploy to web (Vercel)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/IMGeman/NetTest)
+
+The static UI in `app/` deploys to Vercel with no build step. `vercel.json`
+already sets the output directory to `app`, so importing the repo and clicking
+**Deploy** is all that's needed. Every push to `main` then auto-deploys.
+
+> Only the web UI deploys — the Electron desktop shell (`main.js`) does not run on Vercel.
+
 ## Run in browser
 
 ```bash
